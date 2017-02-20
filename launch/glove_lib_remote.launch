@@ -1,0 +1,20 @@
+<!-- rosrun asr_cyberglove_lib glove_lib_remote.sh for launching or set enviromental variables fisrt  -->
+<!-- note: start right glove only, modify args if left glove is also needed -->
+
+<launch>
+  <machine                                                                                                               
+    name = "GloveLibServer"                                                                                         
+    address = "i61p124"                                                                                                 
+    user = "$(env USER)"
+    env-loader = "$(find asr_cyberglove_lib)/launch/env_remote.sh"
+    default = "false"                                                                                                   
+    />
+
+  <node 
+    name="gloveServer_node" 
+    pkg="asr_cyberglove_lib" 
+    type="gloveServer_node" 
+    args="-r --calibration-file-right $(find asr_cyberglove_lib)/cfg/GloveCalibrationRight.cal --tty-right /dev/ttyD0 -d 0"
+    machine="GloveLibServer"
+    />
+</launch>

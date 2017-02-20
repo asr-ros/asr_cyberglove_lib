@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<package>
+	<name>asr_cyberglove_lib</name>
+	<version>1.0.0</version>
+	<description>This package is used to start a server that provides the current joint state values received from the CyberGloves via ROS topics</description>
+	<author>Heller Florian, Meißner Pascal, Nguyen Trung, Yi Xie</author>
+	<maintainer email="asr-ros@lists.kit.edu">Meißner Pascal</maintainer>
+	<license>BSD</license>
+	
+	<buildtool_depend>catkin</buildtool_depend>
+	<build_depend>std_msgs</build_depend>
+	<build_depend>asr_msgs</build_depend>
+	<build_depend>roscpp</build_depend>
+	<build_depend>rospy</build_depend>
+	
+	<run_depend>std_msgs</run_depend>
+	<run_depend>asr_msgs</run_depend>
+	<run_depend>roscpp</run_depend>
+	<run_depend>rospy</run_depend>
+</package>
