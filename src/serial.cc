@@ -55,7 +55,7 @@ int  SerialDevice::open_serial (const char *p_tty_name)
    struct termio tty_set;
    int tty_fd = -1;
     
-   if ( (tty_fd = open(p_tty_name, O_RDWR |O_NOCTTY)) < 0 )//NONBLOCK
+   if ( (tty_fd = open(p_tty_name, O_RDWR | O_NOCTTY | O_NDELAY)) < 0 )//NONBLOCK
      {
        printf("ERROR: Couldn't open port %s!\n", p_tty_name);
        perror(NULL);

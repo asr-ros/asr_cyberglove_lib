@@ -54,7 +54,7 @@ bool gloveServer_impl::init(std::string serialPort) {
 	/* initial ros node */
 	std::string pubName = (myID == rightGlove) ? "rightGloveData" : "leftGloveData";
     gloveDataPub = rosNode.advertise<asr_msgs::AsrGlove>(pubName, 1000);
-    gloveDataPub_radian = rosNode.advertise<asr_msgs::AsrGlove>(pubName+"_randian", 1000);
+    gloveDataPub_radian = rosNode.advertise<asr_msgs::AsrGlove>(pubName+"_radian", 1000);
 
 	/* start gloveDevice */
 	gloveDev = new gloveDevice;

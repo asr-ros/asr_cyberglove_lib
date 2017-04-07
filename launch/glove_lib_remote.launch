@@ -14,7 +14,7 @@
     name="gloveServer_node" 
     pkg="asr_cyberglove_lib" 
     type="gloveServer_node" 
-    args="-r --calibration-file-right $(find asr_cyberglove_lib)/cfg/GloveCalibrationRight.cal --tty-right /dev/ttyD0 -d 0"
+    args="-r --calibration-file-right $(find asr_cyberglove_lib)/cfg/GloveCalibrationRight.cal --tty-right /dev/ttyD2 -d 0"
     machine="GloveLibServer"
     />
 </launch>
