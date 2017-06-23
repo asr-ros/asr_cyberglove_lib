@@ -19,7 +19,7 @@ find_package(Boost REQUIRED COMPONENTS
 catkin_package(
 	CATKIN_DEPENDS asr_msgs std_msgs roscpp rospy
 	LIBRARIES ${PROJECT_NAME}
-	DEPENDS	boost
+	DEPENDS	Boost
 )	
 
 include_directories(
